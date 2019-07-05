@@ -28,6 +28,7 @@
 			<img width="150" id="jscii-element-image" src="test/fixtures/fiah.jpg">
 			<pre id="ascii-container-image"></pre>
 		</div>
+		<button onClick="motherfuckingfishwithahat()">fish with a hat?</button>
 
 	<script>
 		// example using an image and callback to render ascii string
@@ -40,7 +41,12 @@
 			}
 		});
 
-		
+		function motherfuckingfishwithahat() {
+			if (document.getElementById("jscii-element-image").src == "test/fixtures/fiah.jpg")
+			{
+				document.getElementById("jscii-element-image").src = "test/fixtures/fiahhat.jpg";
+			}
+		}
 	</script>
 </body>
 </html>
