@@ -23,41 +23,12 @@
 	</style>
 </head>
 <body>
-	<a href="https://github.com/EnotionZ/jscii"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-	<div class="container">
-		<h2>Image to ASCII string</h2>
+	
 		<div class="section clearfix">
 			<img width="150" id="jscii-element-image" src="test/fixtures/fiah.jpg">
 			<pre id="ascii-container-image"></pre>
 		</div>
 
-		<h2>Webcam Feed to ASCII string <small>(must enable video)</small></h2>
-		<div class="section clearfix">
-			<video id="jscii-element-webrtc" controls autoplay>
-				Your browser does not support video
-			</video>
-			<div>
-				<button id="play-webrtc">Start Render</button>
-				<button id="pause-webrtc">Pause Render</button>
-			</div>
-			<pre id="ascii-container-webrtc"></pre>
-		</div>
-
-		<h2>Video to ASCII string</h2>
-		<div class="section clearfix">
-			<video id="jscii-element-video" width="150" height="112" controls loop>
-				<source src="test/fixtures/movie.webm" type='video/webm; codecs="vp8, vorbis"' />
-				<source src="test/fixtures/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-				<source src="test/fixtures/movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
-				Your browser does not support video
-			</video>
-			<div>
-				<button id="play-video">Start Render</button>
-				<button id="pause-video">Pause Render</button>
-			</div>
-			<pre id="ascii-container-video"></pre>
-		</div>
-	</div>
 	<script>
 		// example using an image and callback to render ascii string
 		var imgJscii = new Jscii({
@@ -69,23 +40,7 @@
 			}
 		});
 
-		// example using webrtc media stream in video element
-		var webcamJscii = new Jscii({
-			container: document.getElementById('ascii-container-webrtc'),
-			el: document.getElementById('jscii-element-webrtc'),
-			webrtc: true
-		});
-
-		// example using normal video element
-		var videoJscii = new Jscii({
-			container: document.getElementById('ascii-container-video'),
-			el: document.getElementById('jscii-element-video')
-		});
-
-		document.getElementById('play-webrtc').addEventListener('click', function() { webcamJscii.play(); });
-		document.getElementById('pause-webrtc').addEventListener('click', function() { webcamJscii.pause(); });
-		document.getElementById('play-video').addEventListener('click', function() { videoJscii.play(); });
-		document.getElementById('pause-video').addEventListener('click', function() { videoJscii.pause(); });
+		
 	</script>
 </body>
 </html>
