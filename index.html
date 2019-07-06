@@ -28,7 +28,8 @@
 			<img visible="false" width="150" id="jscii-element-image" src="test/fixtures/aardvark.png">
 			<pre id="ascii-container-image"></pre>
 		</div>
-		<button onClick="hat()">fish with a hat?</button>
+		<button onClick="hat()">shall they wear a hat?</button>
+		<button onClick="shoes()">perhaps some sexy shoes?</button>
 
 	<script>
 		document.getElementById("jscii-element-image").style.visibility = "hidden";
@@ -45,6 +46,9 @@
 
 		function hat() {
 			document.getElementById("jscii-element-image").src = "test/fixtures/aardvarkhat.jpg";
+		}
+		function shoes() {
+			document.getElementById("jscii-element-image").src = "test/fixtures/aardvarkshoes.jpg";
 		}
 	</script>
 </body>
